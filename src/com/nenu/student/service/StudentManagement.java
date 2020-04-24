@@ -54,7 +54,7 @@ public class StudentManagement extends JFrame implements ActionListener{
 		//设置窗口大小可变
 		this.setResizable(true);
 
-		JLabel bottom = new JLabel("学生信息管理系统V1.0  | By 梁莉莉  | 专业：软件工程  | 邮箱：liangll597@nenu.edu.cn  | Copyright 2020");
+		JLabel bottom = new JLabel("学生信息管理系统V1.2  | By 梁莉莉  | 专业：软件工程  | 邮箱：liangll597@nenu.edu.cn  | Copyright 2020");
 		Font font = new Font("宋体", Font.PLAIN, 16);
 		bottom.setFont(font);
 		this.add(bottom, BorderLayout.SOUTH);
