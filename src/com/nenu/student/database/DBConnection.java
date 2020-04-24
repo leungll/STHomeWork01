@@ -3,7 +3,7 @@ package com.nenu.student.database;
 import java.sql.*;
 
 /**
- * @Author:Liangll
+ * @Author: Liangll
  * @Description: 数据库连接类
  * @Date: 16:07 2020/4/20
  */
@@ -35,5 +35,4 @@ public class DBConnection {
 		//返回Connection对象
 		return con;
 	}
-
 }

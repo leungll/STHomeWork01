@@ -1,7 +1,7 @@
 package com.nenu.student.entity;
 
 /**
- * @Author:Liangll
+ * @Author: Liangll
  * @Description: Student实体类
  * @Date: 16:22 2020/4/20
  */

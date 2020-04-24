@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * @Author:Liangll
+ * @Author: Liangll
  * @Description: 启动界面
  * @Date: 16:29 2020/4/20
  */

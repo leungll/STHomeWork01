@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * @Author:Liangll
+ * @Author: Liangll
  * @Description: 增加学生信息
  * @Date: 16:37 2020/4/20
  */
@@ -110,7 +110,7 @@ public class AddStudent extends JFrame implements ActionListener {
 
 		//检索学生，存储进入数据库
 		String sql = "select * from t_student where id='" + s_id + "'";
-		//打开数据库连接并创建Statement对象
+
 		try {
 			//执行sql语句
 			Statement stm = DBConnection.getCon().createStatement();

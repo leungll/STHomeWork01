@@ -4,7 +4,7 @@
 ![maven](https://img.shields.io/badge/Java-passing-red)
 ![maven](https://img.shields.io/badge/JDK-1.8-success)
 ![maven](https://img.shields.io/badge/MySQL-8.0%2B-yellow)
-![maven](https://img.shields.io/badge/version-v1.1-orange)
+![maven](https://img.shields.io/badge/version-v1.2-orange)
 ![maven](https://img.shields.io/badge/License-Apache%202.0-blue)
 
 ## 项目介绍

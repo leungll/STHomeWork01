@@ -9,8 +9,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * @Author:Liangll
- * @Description: 启动界面
+ * @Author: Liangll
+ * @Description: 学生管理类
  * @Date: 16:36 2020/4/20
  */
 public class StudentManagement extends JFrame implements ActionListener{

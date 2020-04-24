@@ -13,7 +13,7 @@ import com.nenu.student.database.DBConnection;
 import com.nenu.student.entity.Student;
 
 /**
- * @Author:Liangll
+ * @Author: Liangll
  * @Description: 根据学生姓名查找信息
  * @Date: 17:08 2020/4/20
  */

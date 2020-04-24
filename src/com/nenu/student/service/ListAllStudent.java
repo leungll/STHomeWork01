@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author:Liangll
+ * @Author: Liangll
  * @Description: 输出所有学生数据
  * @Date: 12:08 2020/4/22
  */
@@ -131,7 +131,9 @@ public class ListAllStudent extends JFrame {
     public Object[][] queryData(String name){
         if(name.equals(" ")) {
             List<Student> list = queryAllUser();
-//            System.out.println(list);
+            if(list.size() >= 20){
+                JOptionPane.showMessageDialog(null, "学生信息已超过20条！", "提示信息", JOptionPane.WARNING_MESSAGE);
+            }
             rowData = new Object[list.size()][column.length];
             for(int i = 0;i < list.size();i++){
                 for(int j = 0;j < column.length;j++) {

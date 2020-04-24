@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * @Author:Liangll
+ * @Author: Liangll
  * @Description: 删除学生信息
  * @Date: 16:54 2020/4/20
  */
