@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/src/com/nenu/student/service/ListAllStudent.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/nenu/student/service/SelectStudent.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/nenu/student/service/StudentManagement.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/nenu/student/service/UpdateStudent.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/nenu/student/test/SMTest.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
