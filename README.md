@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @version: 
+ * @Author: LL Leung
+ * @Date: 2020-04-24 21:04:27
+ * @LastEditors: LL Leung
+ * @LastEditTime: 2020-04-25 15:51:13
+ -->
 # STHomeWork01
 ### 学生信息管理系统
 
@@ -41,6 +49,7 @@
 * 将仓库中的数据库（ `db_sthomework01.sql`，内置 `t_student` 表)导入本地数据库
     - 在配置文件（ `DBConnection.java`，路径：`src\com\nenu\student\database`）修改本地数据库**账号及密码**等配置信息。
 * 设置与你主机对应的 `JDK` 版本（注：项目默认使用 `JDK1.8` ）
+* `Add as Library`： `mysql-connector-java-5.0.8-bin.jar` （ 路径：`STHomeWork01\lib` ）  
 * 运行 `StudentApplication` 启动项目（路径：`src\com\nenu\student\main`）
 
 ## 项目功能
