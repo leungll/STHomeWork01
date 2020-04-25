@@ -68,7 +68,7 @@
     - **退出整个程序**
 
 ## 类之间调用关系
-![JsukDS.png](https://s1.ax1x.com/2020/04/25/JsukDS.png)
+[![JsK8QP.png](https://s1.ax1x.com/2020/04/25/JsK8QP.png)](https://imgchr.com/i/JsK8QP)
 
 ## 项目部分页面
 [![Jr0uQS.png](https://s1.ax1x.com/2020/04/24/Jr0uQS.png)](https://imgchr.com/i/Jr0uQS)
