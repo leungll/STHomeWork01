@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @version: 
- * @Author: LL Leung
- * @Date: 2020-04-24 21:04:27
- * @LastEditors: LL Leung
- * @LastEditTime: 2020-04-25 15:51:13
- -->
 # STHomeWork01
 ### 学生信息管理系统
 
@@ -77,7 +69,7 @@
     - **退出整个程序**
 
 ## 类之间调用关系
-[![JsK8QP.png](https://s1.ax1x.com/2020/04/25/JsK8QP.png)](https://imgchr.com/i/JsK8QP)
+![](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/175.png)
 
 ## 项目部分页面
 [![Jr0uQS.png](https://s1.ax1x.com/2020/04/24/Jr0uQS.png)](https://imgchr.com/i/Jr0uQS)
