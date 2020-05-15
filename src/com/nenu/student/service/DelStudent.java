@@ -1,6 +1,6 @@
 package com.nenu.student.service;
 
-import com.nenu.student.database.DBConnection;
+import com.nenu.student.database.DatabaseConnection;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -16,8 +16,12 @@ import java.sql.Statement;
  */
 public class DelStudent extends JFrame implements ActionListener {
 
-	JLabel JLNumber = new JLabel("学号");
-	JTextField JTNumber = new JTextField();
+	//NO.1:参考《Google Java编程风格指南》5.2 标识符类型的规则 - 非常量字段名以lowerCamelCase 风格编写
+//	JLabel JLNumber = new JLabel("学号");
+//	JTextField JTNumber = new JTextField();
+
+	JLabel jlnumber = new JLabel("学号");
+	JTextField jtnumber = new JTextField();
 
 	JButton ensureBtn = new JButton("确定");
 	JButton nextBtn = new JButton("重置");
@@ -28,10 +32,10 @@ public class DelStudent extends JFrame implements ActionListener {
 		this.setLayout(null);
 
 		//姓名
-		JLNumber.setBounds(120, 100, 30, 20);
-		JTNumber.setBounds(150, 100, 120, 25);
-		this.add(JLNumber);
-		this.add(JTNumber);
+		jlnumber.setBounds(120, 100, 30, 20);
+		jtnumber.setBounds(150, 100, 120, 25);
+		this.add(jlnumber);
+		this.add(jtnumber);
 
 		ensureBtn.setBounds(100, 250, 60, 25);
 		nextBtn.setBounds(170, 250, 60, 25);
@@ -54,20 +58,22 @@ public class DelStudent extends JFrame implements ActionListener {
 	/**
 	 * 根据学号删除学生信息
 	 * @param studentNumber 学号
-	 * @throws Exception
 	 */
-	public void delStudentInfo(int studentNumber) throws Exception{
-		int s_id = studentNumber;
+	public void delStudentInfo(int studentNumber){
+		//NO.1:参考《Google Java编程风格指南》5.2 标识符类型的规则 - 非常量字段名以lowerCamelCase 风格编写
+//		int s_id = studentNumber;
+
+		int sId = studentNumber;
 
 		//检索学生
-		String sql = "select * from t_student where id='" + s_id + "'";
+		String sql = "select * from t_student where id='" + sId + "'";
 
 		//打开数据库连接并创建Statement对象
 		try {
-			Statement stm = DBConnection.getCon().createStatement();
+			Statement stm = DatabaseConnection.getCon().createStatement();
 			ResultSet rs = stm.executeQuery(sql);
 			if(rs.next()) {
-				sql = "delete from t_student where id ='" + s_id + "'";
+				sql = "delete from t_student where id ='" + sId + "'";
 				int i = stm.executeUpdate(sql);
 				if(i > 0) {
 					JOptionPane.showMessageDialog(null, "删除成功！", "提示信息", JOptionPane.INFORMATION_MESSAGE);
@@ -88,16 +94,19 @@ public class DelStudent extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == ensureBtn) {
-			int s_id = Integer.parseInt(JTNumber.getText());
+			//NO.1:参考《Google Java编程风格指南》5.2 标识符类型的规则 - 非常量字段名以lowerCamelCase 风格编写
+//			int s_id = Integer.parseInt(jtnumber.getText());
+
+			int sId = Integer.parseInt(jtnumber.getText());
 
 			try {
-				delStudentInfo(s_id);
+				delStudentInfo(sId);
 			} catch (Exception exception) {
 				exception.printStackTrace();
 			}
 		}
 		if(e.getSource() == nextBtn) {
-			JTNumber .setText(null);
+			jtnumber.setText(null);
 		}
 		if(e.getSource() == cancelBtn) {
 			setVisible(false);

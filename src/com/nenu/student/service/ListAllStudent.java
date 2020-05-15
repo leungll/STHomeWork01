@@ -1,6 +1,6 @@
 package com.nenu.student.service;
 
-import com.nenu.student.database.DBConnection;
+import com.nenu.student.database.DatabaseConnection;
 import com.nenu.student.entity.Student;
 
 import javax.swing.*;
@@ -20,12 +20,15 @@ import java.util.List;
 public class ListAllStudent extends JFrame {
 
     private Object [][]rowData;
-    private Object []column = {"学号", "姓名", "出生日期", "性别"};
+    private final Object []column = {"学号", "姓名", "出生日期", "性别"};
 
-    JTextField JTName = new JTextField(16);
+    //NO.1:参考《Google Java编程风格指南》5.2 标识符类型的规则 - 非常量字段名以lowerCamelCase 风格编写
+//    JTextField JTName = new JTextField(16);
+
+    JTextField jtname = new JTextField(16);
 
     public ListAllStudent() {
-        JTName.setText(null);
+        jtname.setText(null);
         setTable(" ");
     }
 
@@ -104,7 +107,7 @@ public class ListAllStudent extends JFrame {
         java.util.List<Student> list = new ArrayList<Student>();
 
         try {
-            conn = DBConnection.getCon();
+            conn = DatabaseConnection.getCon();
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
 
@@ -129,10 +132,13 @@ public class ListAllStudent extends JFrame {
      * @return 学生数据二维数组
      */
     public Object[][] queryData(String name){
-        if(name.equals(" ")) {
+        if (" ".equals(name)) {
             List<Student> list = queryAllUser();
             if(list.size() >= 20){
-                JOptionPane.showMessageDialog(null, "学生信息已超过20条！", "提示信息", JOptionPane.WARNING_MESSAGE);
+                //NO.15:参考《Google Java编程风格指南》4.4 列限制：80或100
+//                JOptionPane.showMessageDialog(null, "学生信息已超过20条！", "提示信息", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "学生信息已超过20条！",
+                        "提示信息", JOptionPane.WARNING_MESSAGE);
             }
             rowData = new Object[list.size()][column.length];
             for(int i = 0;i < list.size();i++){

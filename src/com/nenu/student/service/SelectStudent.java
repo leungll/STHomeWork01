@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 import javax.swing.*;
 
-import com.nenu.student.database.DBConnection;
+import com.nenu.student.database.DatabaseConnection;
 import com.nenu.student.entity.Student;
 
 /**
@@ -20,13 +20,17 @@ import com.nenu.student.entity.Student;
 public class SelectStudent extends JFrame implements ActionListener {
 
 	private Object [][]rowData;
-	private Object []column = {"学号", "姓名", "出生日期", "性别"};
+	private final Object []column = {"学号", "姓名", "出生日期", "性别"};
 
 	JPanel ePanel = new JPanel();
 	JPanel wPanel = new JPanel();
 
-	JLabel JLName = new JLabel("姓名");
-	JTextField JTName = new JTextField(16);
+	//NO.1:参考《Google Java编程风格指南》5.2 标识符类型的规则 - 非常量字段名以lowerCamelCase 风格编写
+//	JLabel JLName = new JLabel("姓名");
+//	JTextField JTName = new JTextField(16);
+
+	JLabel jlname = new JLabel("姓名");
+	JTextField jtname = new JTextField(16);
 
 	JButton searchBtn = new JButton("查询");
 	JButton nextBtn = new JButton("重置");
@@ -37,8 +41,8 @@ public class SelectStudent extends JFrame implements ActionListener {
 		this.setLayout(new BorderLayout());
 
 		//输入框
-		wPanel.add(JLName);
-		wPanel.add(JTName);
+		wPanel.add(jlname);
+		wPanel.add(jtname);
 
 		//按钮
 		ePanel.add(searchBtn);
@@ -137,7 +141,7 @@ public class SelectStudent extends JFrame implements ActionListener {
 		Student student = new Student();
 		String sql = "select * from t_student where name='" + name + "'";
 		try {
-			conn = DBConnection.getCon();
+			conn = DatabaseConnection.getCon();
 			//获取结果集
 			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();
@@ -147,7 +151,11 @@ public class SelectStudent extends JFrame implements ActionListener {
 				student.setBirDate(rs.getString(3));
 				student.setGender(rs.getString(4));
 			}else {
-				JOptionPane.showMessageDialog(null, "该账号不存在！", "提示信息", JOptionPane.WARNING_MESSAGE);
+				//NO.15:参考《Google Java编程风格指南》4.4 列限制：80或100
+//				JOptionPane.showMessageDialog(null, "该账号不存在！", "提示信息", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(null, "该账号不存在！",
+						"提示信息", JOptionPane.WARNING_MESSAGE);
+
 			}
 			conn.close();
 		} catch (SQLException e) {
@@ -161,9 +169,12 @@ public class SelectStudent extends JFrame implements ActionListener {
      * @return 学生数据二维数组
      */
     public Object[][] queryData(String name){
-		if(name.equals(" ")) {
+		if(" ".equals(name)) {
+			//NO.15:参考《Google Java编程风格指南》4.4 列限制：80或100
+//			JOptionPane.showMessageDialog(null, "输入为空，请重新输入！", "提示信息", JOptionPane.WARNING_MESSAGE);
 			JOptionPane.showMessageDialog(null, "输入为空，请重新输入！", "提示信息", JOptionPane.WARNING_MESSAGE);
-        }else {
+
+		}else {
         	Student student = queryUser(name);
 			//行设置为1,防止数组越界
 			rowData = new Object[1][column.length];
@@ -175,14 +186,19 @@ public class SelectStudent extends JFrame implements ActionListener {
 		return rowData;
     }
 
+	//NO.8:参考《Google Java编程风格指南》7.1.3 Javadoc标记
+	/**
+	 * 响应事件
+	 * @param e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == searchBtn) {
-			String name = JTName.getText();
+			String name = jtname.getText();
 			setTable(name);
 		}
 		if(e.getSource() == nextBtn) {
-			JTName.setText(null);
+			jtname.setText(null);
 		}
 		if(e.getSource() == cancelBtn) {
 			this.setVisible(false);

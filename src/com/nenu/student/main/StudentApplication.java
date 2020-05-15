@@ -12,9 +12,16 @@ import java.awt.event.ActionListener;
  * @Date: 16:29 2020/4/20
  */
 public class StudentApplication extends Frame implements ActionListener {
+
+    //NO.8:参考《Google Java编程风格指南》7.1.3 Javadoc标记
+    /**
+     * 启动
+     * @param args
+     */
     public static void main(String[] args) {
         new StudentManagement();
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
