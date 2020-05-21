@@ -69,10 +69,10 @@
     - **退出整个程序**
 
 ## 类之间调用关系
-![](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/175.png)
+![class](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/175.png)
 
 ## 项目部分页面
-[![Jr0uQS.png](https://s1.ax1x.com/2020/04/24/Jr0uQS.png)](https://imgchr.com/i/Jr0uQS)
+![frame](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/gui.png)
 
 ## 项目作者
 * 开发及维护：@[LL Leung](https://github.com/leungll)
