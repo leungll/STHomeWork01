@@ -68,6 +68,54 @@
 * 退出功能
     - **退出整个程序**
 
+## 项目结构
+```
+├─.idea
+│  │  .gitignore
+│  │  encodings.xml
+│  │  misc.xml
+│  │  modules.xml
+│  │  uiDesigner.xml
+│  │  vcs.xml
+│  │  workspace.xml
+│  │  
+│  ├─inspectionProfiles
+│  │      Project_Default.xml
+│  │      
+│  └─libraries
+│          mysql_connector_java_5_0_8_bin.xml
+│          
+├─lib
+│      mysql-connector-java-5.0.8-bin.jar
+│                  
+└─src
+    └─com
+        └─nenu
+            └─student
+                ├─database
+                │      DatabaseConnection.java
+                │      
+                ├─entity
+                │      Student.java
+                │      
+                ├─main
+                │      StudentApplication.java
+                │      
+                ├─resources
+                │      timg.jpg
+                │      
+                ├─service
+                │      AddStudent.java
+                │      DelStudent.java
+                │      ListAllStudent.java
+                │      SelectStudent.java
+                │      StudentManagement.java
+                │      UpdateStudent.java
+                │      
+                └─test
+                       StudentManagementTest.java
+```
+
 ## 类之间调用关系
 ![class](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/175.png)
 
