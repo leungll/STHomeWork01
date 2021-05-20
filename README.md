@@ -116,6 +116,95 @@
                        StudentManagementTest.java
 ```
 
+```
+├─java
+│  └─com
+│      └─nenusoftware
+│          └─recommendsystem
+│              │  RecommendSystemApplication.java
+│              │  Swagger.java
+│              │  
+│              ├─controller
+│              │  ├─friendinfo
+│              │  │      FriendInfoController.java
+│              │  │      
+│              │  ├─goods
+│              │  │      GoodsController.java
+│              │  │      
+│              │  ├─goodsrecord
+│              │  │      GoodsRecordController.java
+│              │  │      
+│              │  └─user
+│              │          UserController.java
+│              │          
+│              ├─entity
+│              │  ├─friendinfo
+│              │  │      FriendInfo.java
+│              │  │      
+│              │  ├─goods
+│              │  │      Goods.java
+│              │  │      
+│              │  ├─goodsrecord
+│              │  │      GoodsRecord.java
+│              │  │      
+│              │  └─user
+│              │          User.java
+│              │          
+│              ├─mapper
+│              │  ├─friendinfo
+│              │  │      FriendInfoMapper.java
+│              │  │      
+│              │  ├─goods
+│              │  │      GoodsMapper.java
+│              │  │      
+│              │  ├─goodsrecord
+│              │  │      GoodsRecordMapper.java
+│              │  │      
+│              │  └─user
+│              │          UserMapper.java
+│              │          
+│              └─service
+│                  ├─friendinfo
+│                  │  │  FriendInfoService.java
+│                  │  │  
+│                  │  └─impl
+│                  │          FriendInfoServiceImpl.java
+│                  │          
+│                  ├─goods
+│                  │  │  GoodsService.java
+│                  │  │  
+│                  │  └─impl
+│                  │          GoodsServiceImpl.java
+│                  │          
+│                  ├─goodsrecord
+│                  │  │  GoodsRecordService.java
+│                  │  │  
+│                  │  └─impl
+│                  │          GoodsRecordServiceImpl.java
+│                  │          
+│                  └─user
+│                      │  UserService.java
+│                      │  
+│                      └─impl
+│                              UserServiceImpl.java
+│                              
+└─resources
+    │  application.yml
+    │  
+    └─mapper
+       ├─friendinfo
+       │      FriendInfoMapper.xml
+       │      
+       ├─goods
+       │      GoodsMapper.xml
+       │       
+       ├─goodsrecord
+       │      GoodsRecordMapper.xml
+       │      
+       └─user
+              UserMapper.xml
+```
+
 ## 类之间调用关系
 ![class](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/175.png)
 
