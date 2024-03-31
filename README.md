@@ -1,4 +1,6 @@
 # STHomeWork01
+Student Information Management System, Software Testing and Quality Assurance course, 2020 Spring, NENU 
+
 ### 学生信息管理系统
 
 ![maven](https://img.shields.io/badge/Java-passing-red)
