@@ -119,10 +119,10 @@ Student Information Management System, Software Testing and Quality Assurance co
 ```
 
 ## 类之间调用关系
-![class](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/175.png)
+![st-hw-1](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/st-hw-1.png)
 
 ## 项目部分页面
-![frame](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/gui.png)
+![st-hw-2](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/st-hw-2.png)
 
 ## 项目作者
 * 开发及维护：@[LL Leung](https://github.com/leungll)
